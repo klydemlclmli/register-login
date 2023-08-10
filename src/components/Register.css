@@ -1,0 +1,88 @@
+*{
+  font-family: 'Burbank';
+  font-size: 17px;
+}
+
+.reg, .reg-form, .myButton, .reg-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.reg-title{
+  font-family: 'Bumbastika';
+  font-size: 55px;
+  color: #FFBC3A;
+  text-shadow: -2.5px 2.5px 0 #000, 2.5px 2.5px 0 #000, 2.5px -2.5px 0 #000, -2.5px -2.5px 0 #000;
+  margin: 20px;
+
+}
+
+@media (max-width: 600px) {
+  .reg-title{
+    font-size: 35px;
+  }
+}
+
+.password-toggle-icon{
+  position: absolute;
+  top: 11px;
+  right: 14px;
+  z-index: 1000;
+  cursor: pointer;
+  color: rgba(0,0,0,0.3);
+}
+
+.textfields, .emailNotEmpty{
+  position: relative;
+  margin: 5px;
+}
+
+.textfields input, select, .emailNotEmpty input{
+  padding: 10px;
+  width: 300px;
+  border: 1px solid rgba(0,0,0,0.17);
+  background-color: white;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+}
+
+select{
+  width: 322px;
+}
+
+.textfields .placeholder, .emailNotEmpty .placeholder{
+  position: absolute;
+  left: 0;
+  padding: 12px 10px 10px 15px;
+  pointer-events: none;
+  font-size: 0.9em;
+  color: rgba(0,0,0,0.25);
+  transition: 0.4s;
+}
+
+.textfields input:valid ~ .placeholder,
+.textfields input:focus ~ .placeholder,
+.emailNotEmpty input ~ .placeholder,
+.emailNotEmpty input:focus ~ .placeholder,
+select:focus ~ .placeholder, .option-selected ~ .placeholder{
+  color: black;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  font-weight: 700;
+  padding: 0 10px;
+  background-color: #FFBC3A;
+  border: 1px solid #FFBC3A;
+  letter-spacing: 0.2em;
+}
+
+.textfields input:valid,
+.textfields input:focus,
+.emailNotEmpty input,
+select:focus, .option-selected{
+  border: 2px solid #FFBC3A;
+}

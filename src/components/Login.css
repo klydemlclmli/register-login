@@ -1,0 +1,40 @@
+select option:invalid{
+  border: 2px solid red;
+}
+
+.error-message{
+  color: #CF4949;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.myButton{
+  width: 137px;
+  height: 50px;
+  background-color: rgba(0,0,0,0);
+  border-radius: 14px;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.myButton:active, .myButton:hover{
+  background-color: rgba(0,0,0,0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.7));
+}
+
+.myButton-plain{
+  background-color: rgba(0,0,0,0);
+  text-decoration: none;
+  border: none;
+  padding: 0 3px 0 5px;
+  color: #FFBC3A;
+  cursor: pointer;
+}
+
+.myButton-plain:hover{
+  text-decoration: underline;
+}

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import Register from './components/Register';
+import Login from './components/Login'
+import Welcome from './components/Welcome';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('login');
+
+  // Register
+  if (status === 'register'){
+    return(
+      <div className='App'>
+        <Register status={status} setStatus={setStatus}/>
+      </div>
+    )
+  }
+  // Welcome
+  else if (status === 'welcome'){
+    return(
+      <div className='App'>
+        <Welcome status={status} setStatus={setStatus} email={email}/>
+      </div>
+    )
+  }
+  // Login
+  else{
+    return(
+      <div className='App'>
+        <Login status={status} setStatus={setStatus} setEmail={setEmail}/>
+      </div>
+    )
+  }
 }
 
 export default App;
